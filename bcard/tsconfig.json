@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "compileOnSave": true,
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "debug": true
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}

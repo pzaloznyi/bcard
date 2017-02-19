@@ -2,12 +2,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace bcard
 {
-    using Microsoft.AspNetCore.Http;
-    using Newtonsoft.Json.Serialization;
-
     public class Startup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -32,13 +30,6 @@ namespace bcard
                     "{controller=Home}/{action=Index}/{id?}");
             });
             app.UseSignalR();
-
-            loggerFactory.AddConsole();
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }
